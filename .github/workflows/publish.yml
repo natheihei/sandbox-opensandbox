@@ -30,5 +30,3 @@ jobs:
       - run: pnpm type-check
       - run: pnpm build
       - run: pnpm publish --access public --provenance --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
