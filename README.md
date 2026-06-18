@@ -2,7 +2,11 @@
 
 OpenSandbox-backed sandbox provider for AI SDK Harness agents.
 
-Vercel has released support for [`HarnessAgent`](https://ai-sdk.dev/v7/docs/ai-sdk-harnesses/overview), which lets us run established agent harnesses through the same AI SDK surface. This library plugs that interface into OpenSandbox so we can start a sandbox on our own computer and run our own harness with our own subscription credentials.
+## Why?
+
+Vercel has released support for [`HarnessAgent`](https://ai-sdk.dev/v7/docs/ai-sdk-harnesses/overview), which lets us run established agent harnesses through the same AI SDK surface. `@natheihei/sandbox-opensandbox` plugs that interface into OpenSandbox so Harness sessions can run inside Docker-backed sandboxes on your own machine.
+
+Use it when you want local sandboxes, your own Codex credentials from `${HOME}/.codex`, resumable named sessions, and AI SDK Harness file, command, process, port, and lifecycle support without paying for hosted sandbox infrastructure.
 
 ## Install
 
@@ -10,7 +14,7 @@ Vercel has released support for [`HarnessAgent`](https://ai-sdk.dev/v7/docs/ai-s
 pnpm add @natheihei/sandbox-opensandbox
 ```
 
-## Local Codex with local OpenSandbox (with our subscription)
+## Use Codex with local subscription/credential
 
 We already have a capable computer and Codex authenticated with our subscription. Use them together: run `@ai-sdk/harness-codex` inside OpenSandbox on our own Docker host, reuse the credentials in `${HOME}/.codex`, and skip paying for a hosted sandbox service or wiring up another API key.
 
